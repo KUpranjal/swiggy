@@ -1,0 +1,150 @@
+/* Reset and box model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+/* Navbar styles */
+.nav-id {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background-color: white;
+  width: 80vw;
+  margin: auto;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.time-badge {
+  width: 40px;
+  height: auto;
+}
+
+.location-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.location-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.location-desc {
+  font-size: 13px;
+  color: #555;
+}
+
+.user-icon i {
+  font-size: 28px;
+  color: #444;
+}
+
+/* Search Bar */
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.search-bar input {
+  width: 75vw;
+  padding: 10px 40px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+
+/* User Display Image */
+#user-display {
+  display: flex;
+  justify-content: center;
+  
+  margin-top: 15px;
+}
+
+#user-display img {
+  width: 1440px;
+  border-radius: 30px;
+  height: 484px;
+  object-fit: cover;
+}
+
+/* Slider 1 with animation */
+#slider {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  overflow: hidden;
+  position: relative;
+}
+
+#slider > img {
+  width: 320px;
+  height: 215px;
+  animation: moveLeft 7s linear infinite;
+  object-fit: cover;
+}
+
+@keyframes moveLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Slider 2 (manual scroll) */
+#slider2 {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+#slider2::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+#slider2 > img {
+  width: 98px;
+  height: 120px;
+  object-fit: cover;
+}
+
+/* Slider Heading */
+#slider-h2 {
+  margin-top: 25px;
+  color: #999;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+#slider2>img:hover{
+    scale: 1.1;
+}
